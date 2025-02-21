@@ -5,7 +5,7 @@ int tim;
 int dis;
 int blz = 13
 ;
-
+dig int = 0;
 #include <Servo.h>
 
 Servo km;
@@ -36,8 +36,13 @@ Serial.println();
 if (dis<11 && dis!=0) {
   delay(9);
   digitalWrite(blz, HIGH);
-  km.write(90);
-km.write(0);
+  
+  
+  for (i = 0; i < 0; i++)
+  {
+    km.Write(i);
+    delay(1000); 
+  }
   delay(1500);
 } else{
    digitalWrite(blz, LOW);
@@ -50,3 +55,4 @@ km.write(0);
 
 
 }
+
